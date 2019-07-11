@@ -24,13 +24,12 @@ https://developer.github.com/webhooks/configuring/
 
 #### Issue
 
-number  title  body  labels(jsonb)  html_url  state  locked  comments_count  raw(jsonb)
-
 ```
 rails g scaffold Issue number:integer title:text body:text labels:jsonb html_url:string state:string{20} locked:boolean comments_count:integer raw:jsonb
 ```
 
 #### Comment
 
-comment_id issue:reference html_url  issue_url  user(jsonb)  body:text 
-
+```
+rails g scaffold Comment comment_id:integer issue:references html_url:text issue_url:text user:jsonb body:text
+```
