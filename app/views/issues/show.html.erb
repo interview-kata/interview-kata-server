@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @issue.number %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @issue.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @issue.body %>
+</p>
+
+<p>
+  <strong>Labels:</strong>
+  <%= @issue.labels %>
+</p>
+
+<p>
+  <strong>Html url:</strong>
+  <%= @issue.html_url %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @issue.state %>
+</p>
+
+<p>
+  <strong>Locked:</strong>
+  <%= @issue.locked %>
+</p>
+
+<p>
+  <strong>Comments count:</strong>
+  <%= @issue.comments_count %>
+</p>
+
+<p>
+  <strong>Raw:</strong>
+  <%= @issue.raw %>
+</p>
+
+<%= link_to 'Edit', edit_issue_path(@issue) %> |
+<%= link_to 'Back', issues_path %>

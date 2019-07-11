@@ -1,24 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 本地开发服务配置
 
-Things you may want to cover:
+https://developer.github.com/webhooks/configuring/
 
-* Ruby version
+./ngrok http 3000
 
-* System dependencies
+## Configure
 
-* Configuration
+* [Create webhook](https://developer.github.com/webhooks/creating/)
 
-* Database creation
+* Copy `config/application.yml.example` to `config/application.yml`
 
-* Database initialization
+## rails run
 
-* How to run the test suite
+* bundle
 
-* Services (job queues, cache servers, search engines, etc.)
+* rails db:migrate
 
-* Deployment instructions
+* rails s
 
-* ...
+## DDl
+
+#### Issue
+
+number  title  body  labels(jsonb)  html_url  state  locked  comments_count  raw(jsonb)
+
+```
+rails g scaffold Issue number:integer title:text body:text labels:jsonb html_url:string state:string{20} locked:boolean comments_count:integer raw:jsonb
+```
+
+#### Comment
+
+comment_id issue:reference html_url  issue_url  user(jsonb)  body:text 
+
