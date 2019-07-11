@@ -57,12 +57,14 @@ class GithubController < ApplicationController
 
     if events.include? action
       if issue
-        issue.update(takeIssueInfo)
+        if json_body[:issue][:locked] # 被锁则删除
+          issue.destroy
+        else
+          issue.update(takeIssueInfo) # 正常更新
+        end
       else
         Issue.create(takeIssueInfo)
       end
-    elsif action == 'deleted'
-      issue.destroy
     end
   end
 

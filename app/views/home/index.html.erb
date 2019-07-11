@@ -1,4 +1,4 @@
-<header class="header pt-4 pb-3">
+<header class="header pt-4 pb-3" data-controller="home">
   <div class="container-fluid">
     <div class="row">
       <div class="col col-lg-10 offset-lg-1">
@@ -15,14 +15,14 @@
   </div>
 </header>
 
-<div class="container-fluid">
+<div class="container-fluid mb-5">
   <div class="row">
     <div class="col col-lg-8 offset-lg-2">
-      <div class="search">
+      <div class="search m-auto">
         <form class="search__form d-flex align-items-baseline position-relative">
           <div class="search__container w-100">
             <div class="w-100 position-relative d-inline-block">
-              <input class="search__input" type="text" />
+              <input class="search__input" type="text" placeholder="Search algorithm" />
             </div>
           </div>
           <div class="search__icon position-absolute">
@@ -30,6 +30,80 @@
           </div>
         </form>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col-lg-10 offset-lg-1">
+      <div class="card-list__wrap clearfix">
+        <div class="card-list pl-3 pr-3 pt-2 pb-2">
+          <div class="card-list__avatar d-flex align-items-center">
+            <a href="#" class="mr-3">
+              <img class="rounded-circle" src="https://avatars3.githubusercontent.com/u/18432680?s=180&v=4" alt="" />
+            </a>
+            <div>
+              <a href="#" class="text-body">monsterooo</a>
+              <p class="text-black-50 mt-1 mb-1">promise will for you time</p>
+            </div>
+          </div>
+          <div class="card-list__line mt-2 mb-3"></div>
+          <div class="card-list__content">
+            <%= markdown '示例:
+              说明:
+
+              必须在原数组上操作，不能拷贝额外的数组。
+
+              尽量减少操作次数。'
+            %>
+          </div>
+        </div>
+        <div class="card-list pl-3 pr-3 pt-2 pb-2">
+          <div class="card-list__avatar d-flex align-items-center">
+            <a href="#" class="mr-3">
+              <img class="rounded-circle" src="https://avatars3.githubusercontent.com/u/18432680?s=180&v=4" alt="" />
+            </a>
+            <div>
+              <a href="#" class="text-body">monsterooo</a>
+              <p class="text-black-50 mt-1 mb-1">promise will for you time</p>
+            </div>
+          </div>
+          <div class="card-list__line mt-2 mb-3"></div>
+          <div class="card-list__content">
+            <%= markdown '示例:
+              说明:
+
+              必须在原数组上操作，不能拷贝额外的数组。
+
+              尽量减少操作次数。'
+            %>
+          </div>
+        </div>
+        <div class="card-list pl-3 pr-3 pt-2 pb-2">
+          <div class="card-list__avatar d-flex align-items-center">
+            <a href="#" class="mr-3">
+              <img class="rounded-circle" src="https://avatars3.githubusercontent.com/u/18432680?s=180&v=4" alt="" />
+            </a>
+            <div>
+              <a href="#" class="text-body">monsterooo</a>
+              <p class="text-black-50 mt-1 mb-1">promise will for you time</p>
+            </div>
+          </div>
+          <div class="card-list__line mt-2 mb-3"></div>
+          <div class="card-list__content">
+            <%= markdown '示例:
+              说明:
+
+              必须在原数组上操作，不能拷贝额外的数组。
+
+              尽量减少操作次数。'
+            %>
+          </div>
+        </div>
+      </div>
+
+      
     </div>
   </div>
 </div>

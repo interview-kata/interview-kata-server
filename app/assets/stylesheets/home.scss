@@ -58,3 +58,36 @@
     }
   }
 }
+
+.card-list {
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  background: transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  @extend .mb-3;
+
+  @include media-breakpoint-up(sm) {
+    float: left;
+    width: calc(50% - 20px);
+    margin: 0 10px;
+  }
+  @include media-breakpoint-up(lg) {
+    float: left;
+    width: calc(33.3333% - 20px);
+  }
+
+  &__wrap {
+    margin: 0 -20px;
+  }
+  &__avatar {
+    line-height: 1;
+    img {
+      width: 44px;
+      height: 44px;
+    }
+  }
+  &__line {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
